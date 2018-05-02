@@ -1,18 +1,46 @@
-# juanrod__simple
+# Simple Landing Page for juanrod.co
 
-> simple portfolio for juanrod
+A landing page to showcase various projects and resume
 
-## Build Setup
+## Getting Started
 
-``` bash
-# install dependencies
+personal
+
+### Prerequisites
+
+Need NPM
+
+
+### Installing
+
+```
+git clone https://github.com/juan-rod/juanrod__simple
+```
+```
+cd juanrod__simple
+```
+```
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## Built With
+
+* dez handz
+
+
+## Authors
+
+* **Juan Rodriguez** - *Initial work* - [juanrod](http://www.juanrod.co)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Nashville Software School -- alma mater
+* Beyonce 
+* Mom
