@@ -1,9 +1,10 @@
-$nav-height: 5em;
+$nav-height: 18em;
 
 .home{
   height:100vh;
   @include flexCenter;
   width:auto;
+  position: relative;
   h1{
     @include fluid-type(34px, 42px);
   }
@@ -22,16 +23,22 @@ $nav-height: 5em;
     width: 100%;
   }
 
-  &__content{
+  &__content--front{
     @include flexCenter;
-    background:cc(one);
-    &:hover{
-      @include dramaShadow;
-      cursor: pointer;
-      cursor:url("./assets/images/jrodheadshot_cursor.png"), pointer;
-    }
     height: calc(100vh - #{$nav-height});
-  
+    z-index: 1;
+    // background:cc(one);
+    // &:hover{
+      //   @include dramaShadow;
+      //   cursor: pointer;
+      //   cursor:url("./assets/images/jrodheadshot_cursor.png"), pointer;
+      // }
+      
+    }
+    &__content--back{
+      height: calc(100vh - #{$nav-height});
+      @include flexCenter;
+      position: absolute;
   }
 
 }

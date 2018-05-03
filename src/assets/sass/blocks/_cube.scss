@@ -1,0 +1,124 @@
+$cube__size: 468px;
+.cube__container{
+  @include flexCenter;
+  width: $cube__size;
+	height: $cube__size;
+	// margin: 0 auto;
+	-webkit-perspective: 2000px;
+	perspective: 2000px;
+  .cube{
+    transform-style: preserve-3d;
+		transform: rotateX(0deg) rotateY(0deg) translateZ(0px) rotate(0deg);
+		width: $cube__size;
+    height: $cube__size;
+    transition: all 1s .5ms cb();
+    &:hover{
+      transform: rotateX(-10deg) rotateY(-10deg) translateZ(0px) rotate(0deg);
+      transition: all 1s .5ms cb();
+    }
+    div{
+			width: $cube__size;
+			height: $cube__size;
+			position: absolute;
+			display: block;
+			overflow: hidden;
+
+			&:before{
+				position: absolute;
+				width: ($cube__size * 1.5);
+				height: ($cube__size * 1.5);
+				opacity: 1;
+				margin: auto;
+				content:'';
+				top: $cube__size;
+				left: 0;
+				transform-origin: 0% 0%;
+				transform: rotate(0deg);
+				// animation: spinintro 4.5s ease-out infinite;
+			}
+			&:after{
+				position: absolute;
+				width: ($cube__size * 1.5);
+				height: ($cube__size * 1.5);
+				opacity: 1;
+				margin: auto;
+				content:'';
+				top: $cube__size;
+				left: -($cube__size / 2);
+				transform-origin: 100% 0%;
+				transform: rotate(0deg);
+				// animation: spinoutro 4.5s ease-out infinite;
+			}
+    }
+    .front{
+			background: cc(one);
+      transform: rotateX(180deg) translateZ(-($cube__size / 2));
+      transform-style: preserve-3d;
+      @include flexCenter;
+			&:before{
+				background: cc(two);
+			}
+			&:after{
+				background: cc(three);
+      }
+      .inner-front{
+        transform: translateZ(20px);
+        height: 200px;
+        width: 200px;
+        background: blue;
+        color: cc(ghost);
+      }
+		}
+		.back{
+			background: cc(three);
+			transform: rotateX(180deg) translateZ($cube__size / 2) rotate(180deg) rotateY(180deg);
+			&:before{
+				background: cc(one);
+			}
+			&:after{
+				background: cc(two);
+			}
+		}
+		.right{
+			background: cc(one);
+			transform: rotateY(90deg) translateZ(-($cube__size / 2)) rotate(-90deg) rotateX(180deg);
+			display: block;
+			&:before{
+				background: cc(one);
+			}
+			&:after{
+				background: cc(two);
+			}
+		}
+		.left{
+			background: cc(three);
+			transform: rotateY(-90deg) translateZ(-($cube__size / 2)) rotatex(180deg) rotate(270deg);
+			&:before{
+				background: cc(one);
+			}
+			&:after{
+				background: cc(two);
+			}
+		}
+		.top{
+			background: cc(two);
+			transform: rotateX(90deg) translateZ(($cube__size / 2)) rotate(-90deg) rotateY(180deg);
+			&:before{
+				background: cc(three);
+				top: -($cube__size * 1.5);
+				left: -($cube__size / 2);
+				transform-origin: 100% 100%;
+			}
+			&:after{
+				background: cc(one);
+				top: $cube__size;
+				left: -($cube__size / 2);
+				transform-origin: 100% 0%;
+			}
+		}
+		.bottom{
+			background: cc(one);
+			transform: rotateX(90deg) translateZ(-($cube__size / 2));
+		}
+  }
+}
