@@ -1,0 +1,34 @@
+$block-height: 9em;
+.block{
+  height: calc(100vh - #{$block-height});
+  width: calc(100vw - #{$block-height});
+  background: cc(thered);
+  position: relative;
+  // @include dramaShadow2;
+  transition: all 500ms cb();
+  .name{
+    height: 200px;
+    width: 200px;
+    display: inline-flex;
+    position: relative;
+    p{
+      color:cc(ghost);
+    }
+    p:nth-child(1) {
+      position: absolute;
+      transform: rotate(-90deg);
+      top: 40px;
+      left: -13px;
+      // color:(ghostwhite)
+    }
+    p:nth-child(2) {
+      position: absolute;
+      left: 5px;
+    }
+  }
+  // &:hover{
+  //   @include dramaShadow;
+  //   transform: scale(.95);
+  //   transition: all 500ms cb();
+  // }
+}

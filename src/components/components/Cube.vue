@@ -1,11 +1,9 @@
 <template>
-  <div class="cube__container border">
-    <!-- <div class="cube border2" @mouseover="mouseover($event)" 
-    data-tilt-scale="0" 
-          data-tilt-speed="1000" 
-         data-tilt-max="50" > -->
-    <div class="cube border2">
-      <div class="front" @mouseover="mouseover($event)" data-tilt-axis="y" data-tilt-glare data-tilt-max-glare="0.8" data-tilt>
+  <div class="cube__container ">
+  
+    <div class="cube ">
+      <div class="front" @mouseover="mouseover($event)" data-tilt-axis="y" data-tilt>
+      <!-- <div class="front" @mouseover="mouseover($event)" data-tilt-axis="y" data-tilt-glare data-tilt-max-glare="0.8" data-tilt> -->
         <div class="inner-front">
           <h1>juanrod</h1>
         </div>

@@ -65,8 +65,8 @@ $cube__size: 468px;
         transform: translateZ(20px);
         height: 200px;
         width: 200px;
-        background: blue;
-        color: cc(ghost);
+				color: cc(ghost);
+				@include flexCenter;
       }
 		}
 		.back{
