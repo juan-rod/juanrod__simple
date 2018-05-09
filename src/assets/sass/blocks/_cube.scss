@@ -1,4 +1,4 @@
-$cube__size: 468px;
+$cube__size: 568px;
 .cube__container{
   @include flexCenter;
   width: $cube__size;
@@ -8,14 +8,16 @@ $cube__size: 468px;
 	perspective: 2000px;
   .cube{
     transform-style: preserve-3d;
-		transform: rotateX(0deg) rotateY(0deg) translateZ(0px) rotate(0deg);
+		// transform: rotateX(0deg) rotateY(0deg) translateZ(0px) rotate(0deg);
+		transform: rotateX(-8deg) rotateY(-8deg) translateZ(0px) rotate(0deg);
 		width: $cube__size;
     height: $cube__size;
-    transition: all 1s .5ms cb();
-    &:hover{
-      transform: rotateX(-10deg) rotateY(-10deg) translateZ(0px) rotate(0deg);
-      transition: all 1s .5ms cb();
-    }
+		transition: all 1s .5ms cb();
+		// @include dramaShadow;
+    // &:hover{
+    //   transform: rotateX(-10deg) rotateY(-10deg) translateZ(0px) rotate(0deg);
+    //   transition: all 1s .5ms cb();
+    // }
     div{
 			width: $cube__size;
 			height: $cube__size;

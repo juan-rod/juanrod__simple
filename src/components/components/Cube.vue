@@ -24,9 +24,9 @@ export default {
     mouseover (e) {
       console.log('e.target:',e.target.parentElement)
       // let className = e.target.parentElement.classList[0]
-      let className = e.target.classList[0]
-      const element = document.querySelector('.'+className);
-        VanillaTilt.init(element);
+      // let className = e.target.classList[0]
+      // const element = document.querySelector('.'+className);
+      //   VanillaTilt.init(element);
     }
    }
 }
