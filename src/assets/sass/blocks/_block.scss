@@ -10,41 +10,69 @@ $block-height: 9em;
   flex-direction: row;
   align-items: flex-start;
   &__left{
+    flex:1;
     @include flexCenter;
     align-items: flex-start;
     height:100%;
-    width:200px;
+    // width:200px;
     .name{
       height: 100%;
       width: 100%;
       display: inline-flex;
       position: relative;
-      p{
+      flex:5;
+      h3{
         color:cc(ghost);
       }
-      p:nth-child(1) {
+      h3:nth-child(1) {
         position: absolute;
         transform: rotate(-90deg);
         top: 40px;
         left: -13px;
       }
-      p:nth-child(2) {
+      h3:nth-child(2) {
         position: absolute;
         left: 5px;
       }
     }
     .social{
+      @include flexCenter;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      padding: 1em .5em;
       width: 100%;
+      flex:1;
+      &__links{
+        @include flexCenter;
+        flex-direction:row;
+        justify-content: space-evenly;
+        align-items: center;
+        width:100%;
+
+      }
     }
   }
   &__right{
+    flex:5;
     @include flexCenter;
+    justify-content: flex-start;
     height:100%;
     .intro{
-
+      align-self: flex-start;
     }
     .projects{
-      
+      align-self: flex-end;
+      width:60%;
+      text-align:right;
+      &__list{
+
+      }
+      &__main--title{
+
+      }
+      &__sub{
+
+      }
     }
   }
   // &:hover{

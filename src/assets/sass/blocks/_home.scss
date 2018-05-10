@@ -5,15 +5,6 @@ $nav-height: 18em;
   @include flexCenter;
   width:auto;
   position: relative;
-  h1{
-    @include fluid-type(34px, 42px);
-  }
-  h2{
-    @include fluid-type(24px, 32px);
-  } 
-  p{
-    @include fluid-type(16px, 22px);
-  }
   .maxW_1199{
     max-width: 1199px;
     width: 100%;
