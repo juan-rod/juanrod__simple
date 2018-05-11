@@ -9,10 +9,10 @@
       <div class="projects__list border2" v-for="project in projects" :key="project.id">
         <div class="projects__main--title border3"><h3>{{project.name}}</h3></div>
         <div class="projects__sub border3">
-          <div class="" v-for="portfolio in project.portfolio" :key="portfolio.id">
-            <a class="" :href="portfolio.src" target="_blank"><p>{{portfolio.name}}</p></a>
-            <div class="portfolio__img">
-              <img :src="portfolio.img" alt="">
+          <div class="projects__sub--item border2" v-for="portfolio in project.portfolio" :key="portfolio.id" >
+            <a class="" :href="portfolio.src" target="_blank" @mouseover="enter($event)" @mouseleave="leave($event)"><p>{{portfolio.name}}</p></a>
+            <div :class="portfolio.name" class="portfolio__img" v-show="showImage">
+              <img :src="portfolio.img" :alt="portfolio.name" :class="{ img__animation: showImage }">
             </div>
           </div>
         </div>
@@ -33,12 +33,12 @@ export default {
             {
               name: 'projection',
               src: 'http://v5.juanrod.co',
-              img:''
+              img:'../../src/assets/images/projection.png'
             },
             {
               name: 'out-of-the-box',
               src: 'http://v4.juanrod.co',
-              img:''
+              // img:'../../src/assets/images/out_of_box.png'
             },
             {
               name: 'brutal-lite',
@@ -62,6 +62,24 @@ export default {
           link: 'www.mediasciencenyc.com'
         }
       ],
+      showImage: false
+    }
+  },
+  computed:{
+    portfolioClass (name) {
+      console.log('name:',name)
+      return 
+    }
+  },
+  methods:{
+    enter (e) {
+      let projectImg = document.querySelector('.portfolio__img')
+      console.log('projectImg:',projectImg)
+      this.showImage = true
+      console.log('enter:',e.target.parentElement.nextElementSibling.classList)
+    },
+    leave (e) {
+      console.log('leave:',e)
     }
   }
 }
