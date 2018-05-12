@@ -1,8 +1,9 @@
 <template>
   <div class="home ">
 
-      <!-- <the-cube></the-cube> -->
-      <the-block></the-block>
+      <the-cube></the-cube>
+      
+      <!-- <the-block></the-block> -->
       <!-- <the-book></the-book> -->
 
   </div>
@@ -12,10 +13,9 @@
 import VanillaTilt from '../../utils/tilt.js'
 import TheCube from '../components/Cube.vue'
 import TheBlock from '../components/Block.vue'
-import TheBook from '../components/Book.vue'
 export default {
   name: 'Home',
-  components: { TheBlock, TheCube, TheBook },
+  components: { TheBlock, TheCube },
   methods:{
     mouseover (e) {
       let className = e.target.classList[0]
