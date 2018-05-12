@@ -1,9 +1,9 @@
 <template>
   <div class="home ">
 
-      <the-cube></the-cube>
+      <!-- <the-cube></the-cube> -->
       
-      <!-- <the-block></the-block> -->
+      <the-block></the-block>
       <!-- <the-book></the-book> -->
 
   </div>

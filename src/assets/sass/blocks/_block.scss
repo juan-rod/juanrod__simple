@@ -1,7 +1,10 @@
 $block-height: 9em;
-.block{
+// $block-height: 568px;
+#block{
   height: calc(100vh - #{$block-height});
   width: calc(100vw - #{$block-height});
+  // height:$block-height;
+  // width: $block-height;
   background: cc(one);
   position: relative;
   transition: all 500ms cb();
@@ -11,7 +14,7 @@ $block-height: 9em;
   align-items: flex-start;
   overflow:hidden;
   padding: 1em;
-  transform: rotateX(0deg) rotateY(-20deg) translateZ(0px) rotate(0deg);
+  // transform: rotateX(0deg) rotateY(-20deg) translateZ(0px) rotate(0deg);
   transform-style: preserve-3d;
   &__left{
     flex:1;

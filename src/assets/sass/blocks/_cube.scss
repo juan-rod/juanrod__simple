@@ -1,26 +1,106 @@
 $cube__size: 568px;
+// $cube__size: 9em;
+// .cube__container{
+// 	border:1px solid black;
+// 	@include flexCenter;
+//   width: calc(100vh - #{$cube__size});
+// 	height: calc(100vh - #{$cube__size});
+// 		-webkit-perspective: 2000px;
+// 	perspective: 2000px;
+// 	.cube{
+// 		transform-style: preserve-3d;
+// 		transform: rotateX(-8deg) rotateY(-8deg) translateZ(0px) rotate(0deg);
+// 		width: calc(100vh - #{$cube__size});
+// 		height: calc(100vh - #{$cube__size});
+// 		transition: all 1s .5ms cb();
+// 		div{
+// 			width: calc(100vh - #{$cube__size});
+// 		height: calc(100vh - #{$cube__size});
+
+// 			position: relative;
+// 			display: block;
+// 			overflow: hidden;
+
+// 			&:before{
+// 				position: absolute;
+// 				width: ($cube__size * 1.5);
+// 				height: ($cube__size * 1.5);
+// 				opacity: 1;
+// 				margin: auto;
+// 				content:'';
+// 				top: $cube__size;
+// 				left: 0;
+// 				transform-origin: 0% 0%;
+// 				transform: rotate(0deg);
+// 			}
+// 			&:after{
+// 				position: absolute;
+// 				width: ($cube__size * 1.5);
+// 				height: ($cube__size * 1.5);
+// 				opacity: 1;
+// 				margin: auto;
+// 				content:'';
+// 				top: $cube__size;
+// 				left: -($cube__size / 2);
+// 				transform-origin: 100% 0%;
+// 				transform: rotate(0deg);
+// 			}
+// 		}
+// 		.front{
+// 						background: cc(one);
+// 			      transform: rotateX(0deg) translateZ(0);
+// 			      transform-style: preserve-3d;
+// 			      @include flexCenter;
+// 						&:before{
+// 							background: cc(two);
+// 						}
+// 						&:after{
+// 							background: cc(three);
+// 			      }
+// 			      .inner-front{
+// 			        transform: translateZ(20px);
+// 			        height: 200px;
+// 			        width: 200px;
+// 							color: cc(ghost);
+// 							@include flexCenter;
+// 			      }
+// 					}
+// 	}
+// }
 .cube__container{
   @include flexCenter;
-  width: $cube__size;
-	height: $cube__size;
+  width:$cube__size;
+	height:$cube__size;
+
 	// margin: 0 auto;
 	-webkit-perspective: 2000px;
 	perspective: 2000px;
   .cube{
-    transform-style: preserve-3d;
-		// transform: rotateX(0deg) rotateY(0deg) translateZ(0px) rotate(0deg);
-		transform: rotateX(-8deg) rotateY(-8deg) translateZ(0px) rotate(0deg);
-		width: $cube__size;
-    height: $cube__size;
+		transform-style: preserve-3d;
+		transform: rotateX(-10deg) rotateY(-10deg) translateZ(0px) rotate(0deg);
+		// transform: rotateX(-8deg) rotateY(-8deg) translateZ(0px) rotate(0deg);
+		width:$cube__size;
+	height:$cube__size;
+ 
 		transition: all 1s .5ms cb();
-		@include dramaShadow;
-    &:hover{
-      transform: rotateX(-10deg) rotateY(-10deg) translateZ(0px) rotate(0deg);
-      transition: all 1s .5ms cb();
-    }
+		// @include dramaShadow;
+    // &:hover{
+    //   transform: rotateX(-10deg) rotateY(-10deg) translateZ(0px) rotate(0deg);
+    //   transition: all 1s .5ms cb();
+    // }
     div{
-			width: $cube__size;
-			height: $cube__size;
+			.block{
+				position:relative;			
+				:before{
+					position:relative;
+				}
+				:after{
+					position:relative;
+				}
+			}
+			width:$cube__size;
+	height:$cube__size;
+
 			position: absolute;
 			display: block;
 			overflow: hidden;
@@ -36,7 +116,6 @@ $cube__size: 568px;
 				left: 0;
 				transform-origin: 0% 0%;
 				transform: rotate(0deg);
-				// animation: spinintro 4.5s ease-out infinite;
 			}
 			&:after{
 				position: absolute;
@@ -49,7 +128,6 @@ $cube__size: 568px;
 				left: -($cube__size / 2);
 				transform-origin: 100% 0%;
 				transform: rotate(0deg);
-				// animation: spinoutro 4.5s ease-out infinite;
 			}
     }
     .front{
@@ -74,6 +152,7 @@ $cube__size: 568px;
 		.back{
 			background: cc(three);
 			transform: rotateX(180deg) translateZ($cube__size / 2) rotate(180deg) rotateY(180deg);
+			@include dramaShadow;
 			&:before{
 				background: cc(one);
 			}
