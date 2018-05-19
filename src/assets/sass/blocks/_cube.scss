@@ -184,6 +184,7 @@ $cube__size: 568px;
 		.top{
 			background: cc(two);
 			transform: rotateX(90deg) translateZ(($cube__size / 2)) rotate(-90deg) rotateY(180deg);
+			// transform: rotateX(90deg) translateZ((9em / 2)) rotate(-90deg) rotateY(180deg);
 			&:before{
 				background: cc(three);
 				top: -($cube__size * 1.5);

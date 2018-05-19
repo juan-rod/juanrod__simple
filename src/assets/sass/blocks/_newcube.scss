@@ -1,0 +1,54 @@
+$cube-edge: 7em;
+$pastels: (#fbc2eb, #a6c1ee) (#84fab0, #8fd3f4) 
+	(#a1c4fd, #c2e9fb) (#f6d365, #fda085) (#ffecd2, #fcb69f) (#feffaa, #b2ff90);
+// body {
+//   margin:0;
+//   height: 100vh;
+//   perspective: 35em;
+//   font-size:2em;
+// }
+[class*='cube'] { position: absolute; }
+.cube { 
+  font-size: 7vmin; 
+  top: 50%; left: 50%;
+  transform-style: preserve-3d;
+  transform: rotate3d(var(--i, -0), var(--j, 8), 0, var(--a, -27deg)) 
+        var(--p, unquote(' '));
+  // animation: ani 1s linear infinite;
+  
+  &__face {
+    margin: -.5*$cube-edge;
+    width: $cube-edge; height: $cube-edge;
+    backface-visibility: hidden;
+    border:1px solid red;
+    transform: rotate3d(var(--i), var(--j), 0, calc(var(--m)*90deg)) 
+    translateZ(.5*$cube-edge);
+	
+  &:nth-child(1) { --i: 0; --j: 1; --m:  0; }
+  &:nth-child(2) { --i: 0; --j: 1; --m:  1; background: blue; }
+  &:nth-child(3) { --i: 0; --j: 1; --m:  2; }
+  &:nth-child(4) { --i: 0; --j: 1; --m:  3; }
+  &:nth-child(5) { --i: 1; --j: 0; --m:  1; }
+  &:nth-child(6) { --i: 1; --j: 0; --m: -1; }
+  //   --i: 0; --j: 1;
+  //   transform: rotate3d(var(--i), var(--j), 0, var(--a)) 
+  //           translateZ(.5*$cube-edge);
+  //   // interpolate because Sass apparently has issues with this
+    background: #{'linear-gradient(var(--ga), var(--gs))'};
+		
+	// 	&:nth-child(n + 5) { --i: 1; --j: 0 }
+	
+    // @for $f from 0 to 6 {
+		// 	&:nth-child(#{$f + 1}) {
+		// 		--a: if($f < 4, $f, pow(-1, $f))*90deg;
+		// 		--ga: random(360)*1deg;
+		// 		--gs: nth($pastels, $f + 1);
+		// 	}
+		// }
+  
+  }
+}
+
+@keyframes ani {
+	to { transform: rotate3d(1, 1, 1, 1turn)  rotate3d(1, -1, 1, 1turn) }
+}

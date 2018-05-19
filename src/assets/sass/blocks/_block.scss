@@ -1,10 +1,23 @@
-$block-height: 9em;
+// $block-height: 9em;
+$block-height: 100%;
 // $block-height: 568px;
-#block{
-  height: calc(100vh - #{$block-height});
-  width: calc(100vw - #{$block-height});
-  // height:$block-height;
-  // width: $block-height;
+
+// .block__side {
+//   position: absolute;
+//   top: 9px;
+//   left: 13px;
+//   height: 105px;
+//   width: 180px;
+//   background: #2696DD;
+//   // transform: skewY(30deg);
+//   // transform: rotate(-60deg);
+// }
+
+.block{
+  // height: calc(100vh - #{$block-height});
+  // width: calc(100vw - #{$block-height});
+  height:$block-height;
+  width: $block-height;
   background: cc(one);
   position: relative;
   transition: all 500ms cb();
@@ -14,7 +27,7 @@ $block-height: 9em;
   align-items: flex-start;
   overflow:hidden;
   padding: 1em;
-  // transform: rotateX(0deg) rotateY(-20deg) translateZ(0px) rotate(0deg);
+  // transform: rotateX(0deg) rotateY(-20deg);
   transform-style: preserve-3d;
   &__left{
     flex:1;
@@ -105,6 +118,7 @@ $block-height: 9em;
               position: absolute;
               left:0;
               top:106px;
+              @include dramaShadow;
               img{
                 width:100%;
                 // bottom:0;
