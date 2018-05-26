@@ -1,10 +1,10 @@
 <template>
-  <div class="block__left border2">
-      <div class="name border3">
+  <div class="block__left">
+      <div class="name">
         <h3>{{fname}}</h3> 
         <h3>{{lname}}</h3>
       </div>
-      <div class="social border3">
+      <div class="social">
         <h2>find me</h2>
         <div class="social__links">
           <div class="social__links--icons" v-for="items in social" :key="items.id">

@@ -3,10 +3,10 @@ $nav-height: 18em;
 .home{
   height:100vh;
   @include flexCenter;
+  flex-direction: row;
   width:auto;
   position: relative;
-  // -webkit-perspective: 35em;
-  // perspective: 35em;
+  // justify-content: space-between;
   
   .maxW_1199{
     max-width: 1199px;
@@ -16,6 +16,20 @@ $nav-height: 18em;
     max-width: 768px;
     width: 100%;
   }
+  .switch--right, .switch--left{
+    @include flexCenter;
+    height: 100%;
+    width:100%;
+    max-width:152px;
+  }
+  // .switch--right{
+  //   position: absolute;
+  //   right: 0;
+  // }
+  // .switch--left{
+  //   position: absolute;
+  //   left: 0;
+  // }
   
   &__content--front{
     @include flexCenter;

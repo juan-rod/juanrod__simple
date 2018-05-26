@@ -1,7 +1,7 @@
 <template>
-  <div id="block" class="block border">
-    <block-left id="block__left"></block-left>
-    <block-right id="block__right"></block-right>
+  <div class="block">
+    <block-left></block-left>
+    <block-right></block-right>
   </div>
 </template>
 

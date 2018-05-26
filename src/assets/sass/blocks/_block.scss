@@ -12,7 +12,9 @@ $block-height: 100%;
 //   // transform: skewY(30deg);
 //   // transform: rotate(-60deg);
 // }
-
+.active{
+  color: cc(third);
+}
 .block{
   // height: calc(100vh - #{$block-height});
   // width: calc(100vw - #{$block-height});
@@ -27,14 +29,13 @@ $block-height: 100%;
   align-items: flex-start;
   overflow:hidden;
   padding: 1em;
-  // transform: rotateX(0deg) rotateY(-20deg);
   transform-style: preserve-3d;
   &__left{
     flex:1;
+    height:100%;
     @include flexCenter;
     align-items: flex-start;
-    height:100%;
-    // width:200px;
+    // // width:200px;
     .name{
       height: 100%;
       width: 100%;
@@ -74,9 +75,9 @@ $block-height: 100%;
   }
   &__right{
     flex:5;
+    height:100%;
     @include flexCenter;
     justify-content: space-between;
-    height:100%;
     position: relative;
     .intro{
       align-self: flex-end;
@@ -102,7 +103,6 @@ $block-height: 100%;
           display: inline-block;
           width:150px;
           text-align:left;
-        
         }
         &__sub{
           @include flexCenter;
@@ -131,36 +131,34 @@ $block-height: 100%;
         }
       }
   }
-  .v {
-    &--fade {
-      &-enter-active,
-      &-leave-active { transition: all 275ms cb() }
+  // .v {
+  //   &--fade {
+  //     &-enter-active,
+  //     &-leave-active { transition: all 275ms cb() }
   
-      &-enter,
-      &-leave-to { opacity: 0 }
+  //     &-enter,
+  //     &-leave-to { opacity: 0 }
   
-      &-leave,
-      &-enter-to { opacity: 1 }
-    }
+  //     &-leave,
+  //     &-enter-to { opacity: 1 }
+  //   }
   
-    &--mask {
-      &-enter-active,
-      &-leave-active { transition: all 150ms cb() 500ms }
+  //   &--mask {
+  //     &-enter-active,
+  //     &-leave-active { transition: all 150ms cb() 500ms }
   
-      &-enter,
-      &-leave-to { opacity: 0 }
+  //     &-enter,
+  //     &-leave-to { opacity: 0 }
   
-      &-leave,
-      &-enter-to { opacity: 1 }
-    } 
-    &--slide{
-      &-enter-active,
-      &-leave-active { transition: all 1s cb(out); }
-      &-enter{ transform: translate(0, 100%);}
-      &-leave-to {  transform: translate(0, -250%); }
-  
-      
-    }
-  }
+  //     &-leave,
+  //     &-enter-to { opacity: 1 }
+  //   } 
+  //   &--slide{
+  //     &-enter-active,
+  //     &-leave-active { transition: all 1s cb(out); }
+  //     &-enter{ transform: translate(0, 100%);}
+  //     &-leave-to {  transform: translate(0, -250%); }
+  //   }
+  // }
 
 }
